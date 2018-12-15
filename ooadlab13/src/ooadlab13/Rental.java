@@ -1,16 +1,14 @@
 package ooadlab13;
 
-import java.util.Date;
-
 class Rental {
 //    private final Movie movie = new Movie("movie_title", Movie.REGULAR);
     private Movie _movie;
     private int _daysRented;
-    public Rental(Movie movie, Date start, Date end) {
+    public Rental(Movie movie, DateRange range) {
 //        movie.setTitle(movie);
 //        movie.set_priceCode(priceCode);
         _movie = movie;
-        _daysRented = (int)((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+        _daysRented = (int)((range.getEnd().getTime() - range.getStart().getTime()) / (1000 * 60 * 60 * 24));
     }
     public int getDaysRented() {
         return _daysRented;

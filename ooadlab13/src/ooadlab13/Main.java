@@ -45,9 +45,9 @@ public class Main {
 //        C1.addRental(new Rental(M1_Title, start, end1));
 //        C1.addRental(new Rental(M2_Title, start, end2));
 //        C1.addRental(new Rental(M3_Title, start, end3));
-        C1.addRental(new Rental(M1, start, end1));
-        C1.addRental(new Rental(M2, start, end2));
-        C1.addRental(new Rental(M3, start, end3));
+        C1.addRental(new Rental(M1, new DateRange(start, end1)));
+        C1.addRental(new Rental(M2, new DateRange(start, end2)));
+        C1.addRental(new Rental(M3, new DateRange(start, end3)));
         System.out.println(C1.statement());
         System.out.println();
 
@@ -56,8 +56,8 @@ public class Main {
         end2 = new Date(2013, 7, 19);
 //        C2.addRental(new Rental(M1_Title, start, end1));
 //        C2.addRental(new Rental(M3_Title, start, end2));
-        C2.addRental(new Rental(M1, start, end1));
-        C2.addRental(new Rental(M3, start, end2));
+        C2.addRental(new Rental(M1, new DateRange(start, end1)));
+        C2.addRental(new Rental(M3, new DateRange(start, end2)));
         System.out.println(C2.statement());
         System.out.println();
 
@@ -66,8 +66,8 @@ public class Main {
         end2 = new Date(2013, 6, 2);
 //        C3.addRental(new Rental(M2_Title, start, end1));
 //        C3.addRental(new Rental(M3_Title, start, end2));
-        C3.addRental(new Rental(M2, start, end1));
-        C3.addRental(new Rental(M3, start, end2));
+        C3.addRental(new Rental(M2, new DateRange(start, end1)));
+        C3.addRental(new Rental(M3, new DateRange(start, end2)));
         System.out.println(C3.statement());
         System.out.println();
     }
