@@ -1,14 +1,13 @@
 package ooadlab13;
 
 class Rental {
-    //    private final Movie movie = new Movie("movie_title", Movie.REGULAR);
     private Movie _movie;
     private int _daysRented;
+    private int frequentRenterPoints;
     public Rental(Movie movie, DateRange range) {
-//        movie.setTitle(movie);
-//        movie.set_priceCode(priceCode);
         _movie = movie;
         _daysRented = (int)((range.getEnd().getTime() - range.getStart().getTime()) / (1000 * 60 * 60 * 24));
+        frequentRenterPoints = 0;
     }
     public int getDaysRented() {
         return _daysRented;
@@ -22,7 +21,6 @@ class Rental {
         return _movie.get_priceCode();
     }
 
-    //    private double amountFor(double thisAmount, Rental aRental) {
     public double getCharge() {
         double thisAmount = 0;
         //determine amounts for aRental line
@@ -44,5 +42,14 @@ class Rental {
                 break;
         }
         return thisAmount;
+    }
+
+    public int getFrequentRenterPoints() {
+        // add frequent renter points
+        frequentRenterPoints ++;
+        // add bonus for a two day new release rental
+        if ((getPriceCode() == Movie.NEW_RELEASE)
+                && getDaysRented() > 1) frequentRenterPoints++;
+        return frequentRenterPoints;
     }
 }
