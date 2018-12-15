@@ -19,16 +19,15 @@ class Customer {
     }
 
     public String statement() {
+        return getFrequentRenterPoints();
+    }
+
+    private String getFrequentRenterPoints() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
 
         for (Rental each : _rentals) {
-//            double thisAmount = 0;
-//            thisAmount = amountFor(thisAmount, each);
-//            double thisAmount = each.amountFor();
-//            double thisAmount = each.getCharge();
-
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
@@ -37,11 +36,9 @@ class Customer {
 
             //show figures for this rental
             result.append("\t").append(each.getTitle());
-//            result.append("\t").append(String.valueOf(thisAmount));
             result.append("\t").append(String.valueOf(each.getCharge()));
             result.append("\n");
 
-//            totalAmount += thisAmount;
             totalAmount += each.getCharge();
         }
 
