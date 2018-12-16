@@ -48,7 +48,7 @@ public class Main {
         C1.addRental(new Rental(M1, new DateRange(start, end1)));
         C1.addRental(new Rental(M2, new DateRange(start, end2)));
         C1.addRental(new Rental(M3, new DateRange(start, end3)));
-        System.out.println(C1.statement());
+        System.out.println(C1.htmlStatement());
         System.out.println();
 
         start = new Date(2013, 7, 11);
@@ -58,7 +58,7 @@ public class Main {
 //        C2.addRental(new Rental(M3_Title, start, end2));
         C2.addRental(new Rental(M1, new DateRange(start, end1)));
         C2.addRental(new Rental(M3, new DateRange(start, end2)));
-        System.out.println(C2.statement());
+        System.out.println(C2.htmlStatement());
         System.out.println();
 
         start = new Date(2013, 6, 1);
@@ -68,7 +68,7 @@ public class Main {
 //        C3.addRental(new Rental(M3_Title, start, end2));
         C3.addRental(new Rental(M2, new DateRange(start, end1)));
         C3.addRental(new Rental(M3, new DateRange(start, end2)));
-        System.out.println(C3.statement());
+        System.out.println(C3.htmlStatement());
         System.out.println();
     }
 }

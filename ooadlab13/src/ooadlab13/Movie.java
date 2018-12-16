@@ -6,6 +6,11 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
     private String _title;
 
+    public Movie(String title, int priceCode) {
+        _title = title;
+        _priceCode = priceCode;
+    }
+
     public String getTitle() {
         return _title;
     }
@@ -24,8 +29,4 @@ public class Movie {
         this._priceCode = _priceCode;
     }
 
-    public Movie(String title, int priceCode) {
-        _title = title;
-        _priceCode = priceCode;
-    }
 }

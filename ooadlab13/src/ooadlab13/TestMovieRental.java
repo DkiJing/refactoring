@@ -79,7 +79,7 @@ public class TestMovieRental {
         C1.addRental(new Rental(M2, new DateRange(start, end1)));
         C1.addRental(new Rental(M3, new DateRange(start, end1)));
         String ans = getAnswer1();
-        assertTrue(ans.equals(C1.statement()));
+        assertTrue(ans.equals(C1.htmlStatement()));
     }
 
     @Test
@@ -92,7 +92,7 @@ public class TestMovieRental {
         C2.addRental(new Rental(M1, new DateRange(start, end1)));
         C2.addRental(new Rental(M3, new DateRange(start, end1)));
         String ans = getAnswer2();
-        assertTrue(ans.equals(C2.statement()));
+        assertTrue(ans.equals(C2.htmlStatement()));
     }
 
     @Test
@@ -105,6 +105,6 @@ public class TestMovieRental {
         C3.addRental(new Rental(M2, new DateRange(start, end1)));
         C3.addRental(new Rental(M3, new DateRange(start, end1)));
         String ans = getAnswer3();
-        assertTrue(ans.equals(C3.statement()));
+        assertTrue(ans.equals(C3.htmlStatement()));
     }
 }

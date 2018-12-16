@@ -21,6 +21,8 @@ class Rental {
         return _movie.get_priceCode();
     }
 
+    public Movie getMovie() { return _movie; }
+
     public double getCharge() {
         double thisAmount = 0;
         //determine amounts for aRental line
@@ -52,4 +54,5 @@ class Rental {
                 && getDaysRented() > 1) frequentRenterPoints++;
         return frequentRenterPoints;
     }
+
 }
