@@ -15,4 +15,9 @@ public class ChildrenPrice extends Price {
         }
         return result;
     }
+
+    @Override
+    public int getFrequenctRenterPoint(int frequentRenterPoints, int daysRented) {
+        return frequentRenterPoints ++;
+    }
 }
